@@ -2,7 +2,6 @@ package com.github.games647.packetdumper;
 
 import com.github.games647.packetdumper.hooks.bukkit.PacketAPIListener;
 import com.github.games647.packetdumper.hooks.bukkit.ProtocolListener;
-
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +17,8 @@ public final class PacketDumperBukkit extends JavaPlugin {
             ProtocolListener.register(this);
         } else if (getServer().getPluginManager().isPluginEnabled("PacketListenerAPI")) {
             PacketAPIListener.register(this);
+        } else {
+            getLogger().warning("No packet listener API found");
         }
     }
 

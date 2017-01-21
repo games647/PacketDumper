@@ -15,6 +15,8 @@ public class PacketDumperBungee extends Plugin {
 
         if (getProxy().getPluginManager().getPlugin("BungeePacketListenerApi") != null) {
             BungeePacketListener.register(this);
+        } else {
+            getLogger().warning("No packet listener API found");
         }
     }
 
