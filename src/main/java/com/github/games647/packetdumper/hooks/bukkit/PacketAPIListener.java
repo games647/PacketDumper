@@ -23,14 +23,14 @@ public class PacketAPIListener extends PacketHandler {
     public void onSend(SentPacket sentPacket) {
         Player receiver = sentPacket.getPlayer();
         Object packet = sentPacket.getPacket();
-        plugin.getPacketFormatter().onSent(plugin.convertPlayer(receiver), packet);
+        plugin.getPacketFormatter().onSent(plugin.convertPlayer(receiver), packet, null);
     }
 
     @Override
     public void onReceive(ReceivedPacket receivedPacket) {
         Player sender = receivedPacket.getPlayer();
         Object packet = receivedPacket.getPacket();
-        plugin.getPacketFormatter().onSent(plugin.convertPlayer(sender), packet);
+        plugin.getPacketFormatter().onSent(plugin.convertPlayer(sender), packet, null);
     }
 
     public static void register(PacketDumperBukkit plugin) {

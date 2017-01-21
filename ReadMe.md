@@ -14,14 +14,20 @@ or only packet to/from a specific player.
 
 ## ToDo
 
-* Filtering packet ids
-* Filter packet phase
 * Filter packet receiver/sender
 * Try to deobfuscate fields if possible
 
 ## Commands
 
-    none at the moment
+    /packet-listener <start/stop>
+    
+    /packet-filter <add/remove> phase <handshake/play/status/login>
+    /packet-filter <add/remove> player <playerName>
+    /packet-filter <add/remove> id <packet-name> [in/out]
+
+## Permission
+
+* packetdumper
 
 ## Supported Plugins/Platforms
 

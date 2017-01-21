@@ -17,8 +17,10 @@ softdepend:
 commands:
   packet-filter:
     description: 'Filters the packets that should be printed to the console'
-    usage: '/<command> <phase/player/id> <add/remove>'
+    permission: ${project.artifactId}
+    usage: '/<command> <add/remove> <phase/player/id> <name>'
 
   packet-listener:
     description: 'Starts or stops the listener'
+    permission: ${project.artifactId}
     usage: '/<command> <start/stop>'
