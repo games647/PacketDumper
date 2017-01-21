@@ -3,9 +3,11 @@
 # This make it easy to combine BungeeCord and Bukkit support in one plugin
 name: ${project.parent.name}
 # ${-} will be automatically replaced by Maven
-main: ${project.groupId}.${project.artifactId}.${project.name}
+main: ${project.groupId}.${project.artifactId}.${project.name}Bungee
 
 version: ${project.version}
 
 description: |
     ${project.description}
+
+softdepend: [BungeePacketListenerAPI]

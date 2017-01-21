@@ -13,3 +13,12 @@ dev-url: ${project.url}
 softdepend:
   - ProtocolLib
   - PacketListenerAPI
+
+commands:
+  packet-filter:
+    description: 'Filters the packets that should be printed to the console'
+    usage: '/<command> <phase/player/id> <add/remove>'
+
+  packet-listener:
+    description: 'Starts or stops the listener'
+    usage: '/<command> <start/stop>'
